@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +10,10 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #e67628; /* Fundo laranja sólido */
+      /* Fundo em degradê de laranja para amarelo e de volta para laranja */
+      background: linear-gradient(135deg, #ff8c42, #ffd166, #ff8c42);
+      background-size: 200% 200%;
+      animation: moverCores 6s ease-in-out infinite alternate;
       color: #000;
       display: flex;
       flex-direction: column;
@@ -20,13 +22,28 @@
       min-height: 100vh;
     }
 
+    /* Animação suave do degradê */
+    @keyframes moverCores {
+      0% {
+        background-position: left top;
+      }
+      100% {
+        background-position: right bottom;
+      }
+    }
+
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 50px;
       color: #fff;
       margin-bottom: 30px;
       text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
+    }
+
+    h1:hover {
+      transform: scale(1.05);
     }
 
     .container {
@@ -48,7 +65,8 @@
       background-color: rgba(255, 255, 255, 0.6);
       padding: 20px;
       border-radius: 15px;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(3px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
 
     .texto:hover {
@@ -56,7 +74,7 @@
     }
 
     img {
-      width: 420px; /* Aumentei o tamanho da imagem */
+      width: 420px;
       border-radius: 15px;
       box-shadow: 0 5px 25px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
@@ -71,6 +89,7 @@
         flex-direction: column;
         text-align: center;
       }
+
       img {
         width: 300px;
       }
@@ -87,7 +106,7 @@
       <p>A marca valoriza a <strong>diversidade</strong> e incentiva a <strong>autoexpressão</strong>, ajudando cada pessoa a realçar sua beleza com confiança e estilo.</p>
     </div>
 
-    <img src="mari maria.jpg" alt="mari maria.jpg">
+    <img src="mari maria.jpg" alt="Mari Maria Makeup">
   </div>
 
 </body>
