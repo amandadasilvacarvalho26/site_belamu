@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #000000, #444444, #999999, #ffffff);
+      background-size: 300% 300%;
+      animation: fundoAnimado 10s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    @keyframes fundoAnimado {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px;
+      color: #fff;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 85%;
+      max-width: 1100px;
+      gap: 40px;
+    }
+
+    .texto {
+      width: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 25px 30px;
+      border-radius: 15px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #f2f2f2;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+      text-align: justify;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .texto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+    }
+
+    strong {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .imagem {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .imagem img {
+      width: 100%;
+      max-width: 380px; /* imagem reduzida */
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .imagem img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .texto, .imagem {
+        width: 100%;
+      }
+      .imagem img {
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nars</h1>
+
+  <div class="container">
+    <div class="texto">
+      <p>
+        A <strong>NARS</strong> é uma marca de maquiagem de luxo criada por <strong>François Nars</strong> em 1994.
+        Reconhecida por sua <strong>ousadia e criatividade</strong>, a marca incentiva a <strong>autoexpressão</strong> e valoriza a <strong>individualidade</strong>.
+        Seus produtos combinam <strong>qualidade, arte e sofisticação</strong>, inspirando pessoas a se sentirem <strong>autênticas e confiantes</strong>.
+      </p>
+    </div>
+
+    <div class="imagem">
+      <img src="nars.jpg" alt="nars.jpg">
+    </div>
+  </div>
+
+</body>
+</html>
